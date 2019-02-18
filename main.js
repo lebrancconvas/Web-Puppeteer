@@ -1,8 +1,10 @@
 const puppeteer = require('puppeteer')
 
-(async () => {
-    const browser = await puppeteer.launch({headless: false})
+let puppet = async () => {
+    const browser = await puppeteer.launch({headless: false , devtools: true})
     const page = await browser.newPage()
-    await page.goto('https://www.youtube.com/user/tv11cm/videos?view=0&sort=da&flow=grid')
-    await console.log("Puppeteer Complete.")
-})()
+    await page.goto('https://wa-suta.world/')
+    await console.log("The World Standard - Open!!")
+}
+
+puppet()
